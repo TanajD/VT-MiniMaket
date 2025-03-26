@@ -6,7 +6,7 @@ export const SearchBar = ({ query, setQuery, setResults, setSearchActive }) => {
   const fetchData = async (value) => {
     if (!value.trim()) return; // Prevent empty search requests
 
-    const baseUrl = process.env.REACT_APP_API_URL || "http://localhost:3000";
+    const baseUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
     const apiUrl = `${baseUrl}/api/users?search=${encodeURIComponent(value)}`;
     console.log("Fetching from:", apiUrl);
 
