@@ -23,10 +23,13 @@ const LoginSignup = () => {
 
       <div className="inputs">
         {action === "Login" ? null : (
-          <div className="input">
-            <img src={user_icon} alt=""/>
+          <><div className="input">
+            <img src={user_icon} alt="" />
             <input type="text" placeholder="Name" />
-          </div>
+          </div><div className="input">
+              <img src={user_icon} alt="" />
+              <input type="text" placeholder="Business Name" />
+            </div></>
         )}
         <div className="input">
           <img src={email_icon} alt=""/>
